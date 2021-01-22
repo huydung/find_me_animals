@@ -1,0 +1,92 @@
+{"frames": [
+
+{
+	"filename": "CAT_JOY_000.png",
+	"frame": {"x":0,"y":0,"w":455,"h":436},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":455,"h":436},
+	"sourceSize": {"w":455,"h":436}
+},
+{
+	"filename": "CAT_JOY_001.png",
+	"frame": {"x":455,"y":0,"w":455,"h":436},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":455,"h":436},
+	"sourceSize": {"w":455,"h":436}
+},
+{
+	"filename": "CAT_JOY_002.png",
+	"frame": {"x":910,"y":0,"w":455,"h":436},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":455,"h":436},
+	"sourceSize": {"w":455,"h":436}
+},
+{
+	"filename": "CAT_JOY_003.png",
+	"frame": {"x":1365,"y":0,"w":455,"h":436},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":455,"h":436},
+	"sourceSize": {"w":455,"h":436}
+},
+{
+	"filename": "CAT_JOY_004.png",
+	"frame": {"x":0,"y":436,"w":455,"h":436},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":455,"h":436},
+	"sourceSize": {"w":455,"h":436}
+},
+{
+	"filename": "CAT_JOY_005.png",
+	"frame": {"x":455,"y":436,"w":455,"h":436},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":455,"h":436},
+	"sourceSize": {"w":455,"h":436}
+},
+{
+	"filename": "CAT_JOY_006.png",
+	"frame": {"x":910,"y":436,"w":455,"h":436},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":455,"h":436},
+	"sourceSize": {"w":455,"h":436}
+},
+{
+	"filename": "CAT_JOY_007.png",
+	"frame": {"x":1365,"y":436,"w":455,"h":436},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":455,"h":436},
+	"sourceSize": {"w":455,"h":436}
+},
+{
+	"filename": "CAT_JOY_008.png",
+	"frame": {"x":0,"y":872,"w":455,"h":436},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":455,"h":436},
+	"sourceSize": {"w":455,"h":436}
+},
+{
+	"filename": "CAT_JOY_009.png",
+	"frame": {"x":455,"y":872,"w":455,"h":436},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":455,"h":436},
+	"sourceSize": {"w":455,"h":436}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "cat_joy.png",
+	"format": "RGBA8888",
+	"size": {"w":1820,"h":1308},
+	"scale": "0.5",
+	"smartupdate": "$TexturePacker:SmartUpdate:7264993818f3fc5c2f6d38038455dc1b:744b4345c3a44f95d553f7125e4e3651:78f97b8521e84b48304c350043fad7b8$"
+}
+}

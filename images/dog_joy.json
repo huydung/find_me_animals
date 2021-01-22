@@ -1,0 +1,92 @@
+{"frames": [
+
+{
+	"filename": "DOG_JOY_000.png",
+	"frame": {"x":0,"y":0,"w":254,"h":425},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":254,"h":425},
+	"sourceSize": {"w":254,"h":425}
+},
+{
+	"filename": "DOG_JOY_001.png",
+	"frame": {"x":254,"y":0,"w":254,"h":425},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":254,"h":425},
+	"sourceSize": {"w":254,"h":425}
+},
+{
+	"filename": "DOG_JOY_002.png",
+	"frame": {"x":508,"y":0,"w":254,"h":425},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":254,"h":425},
+	"sourceSize": {"w":254,"h":425}
+},
+{
+	"filename": "DOG_JOY_003.png",
+	"frame": {"x":762,"y":0,"w":254,"h":425},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":254,"h":425},
+	"sourceSize": {"w":254,"h":425}
+},
+{
+	"filename": "DOG_JOY_004.png",
+	"frame": {"x":1016,"y":0,"w":254,"h":425},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":254,"h":425},
+	"sourceSize": {"w":254,"h":425}
+},
+{
+	"filename": "DOG_JOY_005.png",
+	"frame": {"x":0,"y":425,"w":254,"h":425},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":254,"h":425},
+	"sourceSize": {"w":254,"h":425}
+},
+{
+	"filename": "DOG_JOY_006.png",
+	"frame": {"x":254,"y":425,"w":254,"h":425},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":254,"h":425},
+	"sourceSize": {"w":254,"h":425}
+},
+{
+	"filename": "DOG_JOY_007.png",
+	"frame": {"x":508,"y":425,"w":254,"h":425},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":254,"h":425},
+	"sourceSize": {"w":254,"h":425}
+},
+{
+	"filename": "DOG_JOY_008.png",
+	"frame": {"x":762,"y":425,"w":254,"h":425},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":254,"h":425},
+	"sourceSize": {"w":254,"h":425}
+},
+{
+	"filename": "DOG_JOY_009.png",
+	"frame": {"x":1016,"y":425,"w":254,"h":425},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":254,"h":425},
+	"sourceSize": {"w":254,"h":425}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "dog_joy.png",
+	"format": "RGBA8888",
+	"size": {"w":1270,"h":850},
+	"scale": "0.5",
+	"smartupdate": "$TexturePacker:SmartUpdate:3658450635c5f48a50f061fd82322b60:9f62142bf447a3365209021f0464cfff:0fe1104b84ff031eb32abe774c0c2606$"
+}
+}

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'strings.dart';
 import 'consts.dart';
+import 'package:flame/flame.dart';
 
 void main() {
   runApp(MyApp());
