@@ -2,8 +2,26 @@ import 'package:flutter/material.dart';
 import 'strings.dart';
 import 'consts.dart';
 import 'package:flame/flame.dart';
+import 'package:flame/animation.dart' as animation;
+import 'package:flame/sprite.dart';
+import 'package:flame/spritesheet.dart';
+import 'package:flame/position.dart';
+import 'package:flame/widgets/animation_widget.dart';
+import 'package:flame/widgets/sprite_widget.dart';
+import 'dart:ui' as ui;
 
-void main() {
+animation.Animation globalAnim;
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Flame.images.loadAll(
+      <String>['cat_run.png', 'cat_joy.png', 'dog_run.png', 'dog_joy.png']);
+  final globalAnim = SpriteSheet(
+    imageName: 'cat_run.png',
+    columns: 4,
+    rows: 5,
+    textureWidth: 454,
+    textureHeight: 384,
+  ).createAnimation(0);
   runApp(MyApp());
 }
 
@@ -39,15 +57,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
   final String title;
 
   @override
@@ -55,6 +64,22 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  animation.Animation animCatRun;
+  animation.Animation animCatJoy;
+  animation.Animation animCDogRun;
+  animation.Animation animDogJoy;
+
+  List<ui.Image> animImages;
+  Future<List<ui.Image>> _preloadImages;
+
+  @override
+  void initState() {
+    _preloadImages = Flame.images.loadAll(
+        <String>['cat_run.png', 'cat_joy.png', 'dog_run.png', 'dog_joy.png']);
+
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,37 +88,69 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image(
-              image: AssetImage("images/cat_run.png"),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            RaisedButton(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(48.0),
-                side: BorderSide(color: COL_RED),
-              ),
-              padding: EdgeInsets.symmetric(
-                vertical: 10,
-                horizontal: 50,
-              ),
-              child: Text(
-                AppLoc.instance.get(TXT_HIDE),
-                style: TextStyle(
-                  color: COL_CREAM,
-                  fontSize: 24,
+        child: FutureBuilder<List<ui.Image>>(
+          future: _preloadImages,
+          initialData: [],
+          builder:
+              (BuildContext context, AsyncSnapshot<List<ui.Image>> snapshot) {
+            if (snapshot.connectionState != ConnectionState.done) {
+              return Center(
+                child: CircularProgressIndicator(
+                  value: null,
+                  valueColor: new AlwaysStoppedAnimation<Color>(COL_RED),
                 ),
-              ),
-              onPressed: () {},
-            )
-          ],
+              );
+            } else if (snapshot.hasError) {
+              return Center(
+                child: Text('Error Loading Images: ${snapshot.error}'),
+              );
+            } else {
+              // animCatRun = animation.Animation.sequenced(
+              //   'cat_run.png',
+              //   20,
+              //   amountPerRow: 4,
+              //   textureWidth: 454,
+              //   textureHeight: 384,
+              //   stepTime: 0.05,
+              // );
+              animCatRun = globalAnim;
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    width: 350,
+                    height: 400,
+                    color: COL_TURQUOISE,
+                    child: AnimationWidget(
+                      animation: animCatRun,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(48.0),
+                      side: BorderSide(color: COL_RED),
+                    ),
+                    padding: EdgeInsets.symmetric(
+                      vertical: 10,
+                      horizontal: 50,
+                    ),
+                    child: Text(
+                      AppLoc.instance.get(TXT_HIDE),
+                      style: TextStyle(
+                        color: COL_CREAM,
+                        fontSize: 24,
+                      ),
+                    ),
+                    onPressed: () {},
+                  )
+                ],
+              );
+            }
+            ;
+          },
         ),
       ),
     );
